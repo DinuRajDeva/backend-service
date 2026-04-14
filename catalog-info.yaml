@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backend-service
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: service
+  lifecycle: production
+  owner: team-backend
+  system: ecommerce-platform
+  providesApis:
+    - backend-api
+  dependsOn:
+    - component:default/user-service
+    - component:default/payment-service
