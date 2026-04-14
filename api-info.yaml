@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: backend-api
+spec:
+  type: openapi
+  lifecycle: production
+  owner: team-backend
+  definition:
+    $text: ./api/openapi.yaml
